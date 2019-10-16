@@ -385,20 +385,20 @@ class H5AudioPlayer extends Component {
   }
 
   /* Handle mouse click on progress bar event */
-  mouseDownProgressBar = (e) => {
-    const { audio, bar } = this
-    const mousePageX = e.pageX
-    if (mousePageX) {
-      let dragLeft = mousePageX - bar.getBoundingClientRect().left
-      if (dragLeft < 0) {
-        dragLeft = 0
-      } else if (dragLeft > bar.offsetWidth - 20) {
-        dragLeft = bar.offsetWidth - 21
-      }
-      audio.currentTime = (audio.duration * dragLeft) / (bar.offsetWidth - 20) || 0
-      this.updateDisplayTime(dragLeft)
-    }
-  }
+  // mouseDownProgressBar = (e) => {
+  //   const { audio, bar } = this
+  //   const mousePageX = e.pageX
+  //   if (mousePageX) {
+  //     let dragLeft = mousePageX - bar.getBoundingClientRect().left
+  //     if (dragLeft < 0) {
+  //       dragLeft = 0
+  //     } else if (dragLeft > bar.offsetWidth - 20) {
+  //       dragLeft = bar.offsetWidth - 21
+  //     }
+  //     audio.currentTime = (audio.duration * dragLeft) / (bar.offsetWidth - 20) || 0
+  //     this.updateDisplayTime(dragLeft)
+  //   }
+  // }
 
   /**
    * Set an interval to call props.onListen every props.listenInterval time period
