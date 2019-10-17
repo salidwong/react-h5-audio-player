@@ -246,7 +246,6 @@ class H5AudioPlayer extends Component {
       this.setState({ isPlaying: false })
       this.props.onPause && this.props.onPause(e)
     })
-
     // let dragX
     // slider.addEventListener('dragstart', (e) => {
     //   if (!this.audio.src) {
@@ -348,6 +347,7 @@ class H5AudioPlayer extends Component {
       this.audio.play()
     } else if (!this.audio.paused) {
       this.audio.pause()
+      audio.currentTime = 0
     }
   }
 
