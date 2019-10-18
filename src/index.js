@@ -446,7 +446,7 @@ class H5AudioPlayer extends Component {
       <div style={style.audioPlayerWrapper(hidePlayer)} className={`react-h5-audio-player ${className}`}>
         <div style={style.flexWrapper} className="flex">
           <audio
-            // src={src}
+            src={src}
             controls={false}
             title={title}
             mute={mute}
@@ -458,8 +458,8 @@ class H5AudioPlayer extends Component {
               this.audio = ref
             }}
           >
-            <source src={src} type="audio/ogg" />
-            <source src={src} type="audio/mpeg" />
+            {/* <source src={src} type="audio/ogg" />
+            <source src={src} type="audio/mpeg" /> */}
             {incompatibilityMessage}
           </audio>
           <div className="toggle-play-wrapper" style={style.togglePlayWrapper}>
