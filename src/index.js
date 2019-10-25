@@ -325,7 +325,7 @@ class H5AudioPlayer extends Component {
   componentDidUpdate(prevProps) {
     const { src } = this.props
     if (src !== prevProps.src) {
-      this.audio.play()
+      // this.audio.play()
     }
   }
 
@@ -347,7 +347,7 @@ class H5AudioPlayer extends Component {
       this.audio.play()
     } else if (!this.audio.paused) {
       this.audio.pause()
-      audio.currentTime = 0
+      this.audio.currentTime = 0
     }
   }
 
@@ -458,8 +458,6 @@ class H5AudioPlayer extends Component {
               this.audio = ref
             }}
           >
-            {/* <source src={src} type="audio/ogg" />
-            <source src={src} type="audio/mpeg" /> */}
             {incompatibilityMessage}
           </audio>
           <div className="toggle-play-wrapper" style={style.togglePlayWrapper}>
